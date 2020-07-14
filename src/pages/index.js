@@ -1,21 +1,28 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Col, Container, Row } from "react-bootstrap"
+import BlogItem from "../components/BlogItem"
+import Kv from "../components/kv"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Kv />
+    <Container>
+      <Row>
+        <Col sm={4}>
+          <BlogItem />
+        </Col>
+        <Col sm={4}>
+          <BlogItem />
+        </Col>
+        <Col sm={4}>
+          <BlogItem />
+        </Col>
+      </Row>
+    </Container>
   </Layout>
 )
 
